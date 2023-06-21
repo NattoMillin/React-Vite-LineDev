@@ -1,17 +1,16 @@
-import { BrowserRouter, Route } from 'react-router-dom';
-import { Home } from './components/Home';
-import { About } from './components/About';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import  Home  from './components/Home';
+import { Suspense } from 'react';
+import { Loading } from './components/Loading';
 
 function App() {
   return (
     <BrowserRouter>
-      <h1>Hello React Router</h1>      
-      <Route path="/">
-        <Home />
-      </Route>
-      <Route path="/about">
-        <About />
-      </Route>
+      <Suspense fallback={<Loading />}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
