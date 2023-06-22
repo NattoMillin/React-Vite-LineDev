@@ -7,10 +7,10 @@ export type FormValues = {
     SelectItem: string;
 };
 function Home() {
-    const { handleSubmit, control } = useForm<FormValues>({
+    const { handleSubmit, control,formState: { errors }} = useForm<FormValues>({
         defaultValues: {
             FirstName: '',
-            SelectItem:''
+            SelectItem: ''
         },
         mode: 'onChange'
     });
@@ -18,8 +18,8 @@ function Home() {
     const onSubmit = (data: FormValues) => console.log(data);
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <Input control={control} name="FirstName" rules={{ required: true }} />
-            <Options Items={items} control={control} name="SelectItem" rules={{ required: true }} />
+            <Input control={control} name="FirstName" errors={errors} rules={{ required: true }} />
+            <Options Items={items} errors={errors} control={control} name="SelectItem" rules={{ required: true }} />
             <input type="submit" />
         </form>
     );

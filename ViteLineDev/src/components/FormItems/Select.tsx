@@ -1,9 +1,6 @@
 import { useController, UseControllerProps } from 'react-hook-form';
 import { FormValues } from '../Home';
-
-type ItemTypes = {
-    Items? :string[]
-}
+import { ItemTypes } from '../../types/type';
 
 export const Options = (props: ItemTypes & UseControllerProps<FormValues>) => {
     const { field } = useController(props);
