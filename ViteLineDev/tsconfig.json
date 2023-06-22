@@ -10,8 +10,10 @@
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    "isolatedModules": true,    
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "./types",
     "jsx": "react-jsx",
 
     /* Linting */

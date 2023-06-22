@@ -6,7 +6,7 @@
   "homepage": "https://nattomillin.github.io/React-Vite-LineDev/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build && tsc",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
