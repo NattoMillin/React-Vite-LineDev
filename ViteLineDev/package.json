@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://nattomillin.github.io/React-Vite-LineDev/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

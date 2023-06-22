@@ -15,7 +15,7 @@ const {liffId, mock} = generateEnv();
 
 
 liff
-  .init({liffId, mock: mock})
+  .init({liffId: liffId, mock: mock})
   .then(async () => {
     if (!liff.isLoggedIn()) {
       await liff.login();
