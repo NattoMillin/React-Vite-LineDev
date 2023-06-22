@@ -13,9 +13,10 @@ if (import.meta.env.VITE_NODE_ENV !== 'production') {
 
 const {liffId, mock} = generateEnv();
 
+const opstion = {liffId: liffId, mock: mock}
 
 liff
-  .init({liffId: liffId, mock: mock})
+  .init(opstion)
   .then(async () => {
     if (!liff.isLoggedIn()) {
       await liff.login();
