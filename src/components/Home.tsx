@@ -25,7 +25,7 @@ function Home() {
                 <Options Items={items} errors={errors} control={control} name="SelectItem" rules={{ required: true }} />
                 <input type="submit" />
             </form>
-            <button className="button" onClick={RtnMsg}>send message</button>
+            <button className="button" onClick={RtnMsg}>send  message</button>
             <button className="button" onClick={getUserInfo}>show user info</button>
         </>
 );
